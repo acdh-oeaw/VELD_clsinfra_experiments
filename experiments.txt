@@ -1,0 +1,37 @@
+
+# thougt experiments done in JF, from here: https://oeawacat.sharepoint.com/:w:/r/sites/ACDH-CH_p_CLSINFRA_ComputationalLiteraryStudiesInfrastructur/Shared%20Documents/Meetings/RollingMinutes2023.docx?d=w43f313da06984afca3300b281246c0db&csf=1&web=1&e=D5KrCB&nav=eyJoIjoiMTExMjkwOTQzOCJ9
+
+x-veld: 
+	data: 
+		id: {URL} 
+		path: ./data 
+		type: “clscor:X1_Corpus, clscor:X2_CorpusDocument” 
+		format: <https://core.clscor.io/entity/type/format/tei> 
+		feature: “clst:feature/lemma, clst:feature/paragraph” 
+
+x-veld: 
+	executable:    
+		input: 
+			type: clscor:X2_CorpusDocument 
+			format: <https://core.clscor.io/entity/type/format/tei> 
+		output: 
+			type:  
+ 
+
+# fetch data from URL 
+x-veld: 
+	executable:    
+		input: 
+			-  
+				type: “environment variable” 
+				name: “url”  
+			- 
+				type: “environment variable” 
+				name: “format” 
+ 
+			format: <https://core.clscor.io/entity/type/format/json> 
+		output: 
+			type:  
+ 
+populate the executable with parameter in chain-VELD  
+(with <https://dracor.org/api/>, < https://dummyjson.com/posts/48> 
